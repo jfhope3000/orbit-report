@@ -5,7 +5,7 @@ export class Satellite {
     operational: boolean;
     launchDate: string;
 
-    constructor() { }
+    constructor () {}
 
 }
 
