@@ -17,11 +17,11 @@ export class Satellite {
     }
 
     shouldShowWarning() {
-        let type = this.type;
-            if (type === "Space Debris") {
-                this.warning = true;
+        let warning = this.warning;
+            if (this.type === "Space Debris") {
+                warning = true;
             } else {
-                this.warning = false;
-            } 
+                warning = false;
+            } return warning;
     }
 }
