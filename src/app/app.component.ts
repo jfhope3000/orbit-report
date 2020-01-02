@@ -27,11 +27,13 @@ export class AppComponent {
                   fetchedSatellites[i].orbitType,
                   fetchedSatellites[i].operational);
                this.sourceList.push(satellite);
+               // make a copy of the sourceList to be shown to the user
+               this.displayList = this.sourceList.slice(0);
             }
          }.bind(this));
       }.bind(this));
    }
-   
+
    search(searchTerm: string): void {
       let matchingSatellites: Satellite[] = [];
       searchTerm = searchTerm.toLowerCase();
@@ -43,8 +45,6 @@ export class AppComponent {
       }
       // assign this.displayList to be the the array of matching satellites
       // this will cause Angular to re-make the table, but now only containing matches
-      // make a copy of the sourceList to be shown to the user
-      this.displayList = this.sourceList.slice(0);
    }
 }
 
