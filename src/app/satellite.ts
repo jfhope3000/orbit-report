@@ -15,8 +15,8 @@ export class Satellite {
     }
 
     shouldShowWarning() {
-        let warning = this.type;
-        if (warning === "Space Debris") {
+        let warning = this.warning;
+        if (this.type === "Space Debris") {
             return true;
         } else {
             return false;
